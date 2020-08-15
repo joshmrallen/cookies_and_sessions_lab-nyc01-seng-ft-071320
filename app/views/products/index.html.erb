@@ -1,0 +1,10 @@
+<ul>
+    <%= render partial: 'product', collection: cart %>
+</ul>
+
+
+<%= form_tag(url: 'products/add', method: 'post') do |f| %>
+    <%= label_tag(:product, 'Product:') %>
+    <%= text_field_tag(:product) %>
+    <%= submit_tag('add to cart')%>
+<% end %>
